@@ -1,0 +1,155 @@
+Microsoft Windows [Version 10.0.19045.4170]
+(c) Microsoft Corporation. All rights reserved.
+
+
+C:\Users\Admin>sqlplus
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Wed Mar 27 11:41:17 2024
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Enter user-name: system
+Enter password:
+Last Successful login time: Fri Mar 22 2024 10:46:53 +05:30
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+
+SQL> create table studentsdetails(name varchar(20),age int,mark int);
+
+Table created
+
+
+SQL> alter table studentsdetails add department varchar(20);
+
+Table altered.
+
+SQL> describe studentsdetails
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ NAME                                               VARCHAR2(20)
+ AGE                                                NUMBER(38)
+ MARK                                               NUMBER(38)
+ DEPARTMENT                                         VARCHAR2(20)
+
+SQL> insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department');
+Enter value for name: priya
+Enter value for age: 21
+Enter value for mark: 89
+Enter value for department: history
+old   1: insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department')
+new   1: insert into studentsdetails(name,age,mark,department)values('priya',21,89,'history')
+
+1 row created.
+
+SQL> insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department');
+Enter value for name: tom
+Enter value for age: 21
+Enter value for mark: 90
+Enter value for department: commerce
+old   1: insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department')
+new   1: insert into studentsdetails(name,age,mark,department)values('tom',21,90,'commerce')
+
+1 row created.
+
+SQL> insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department');
+Enter value for name: eva
+Enter value for age: 22
+Enter value for mark: 91
+Enter value for department: english
+old   1: insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department')
+new   1: insert into studentsdetails(name,age,mark,department)values('eva',22,91,'english')
+
+1 row created.
+
+SQL> insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department');
+Enter value for name: rincy
+Enter value for age: 23
+Enter value for mark: 78
+Enter value for department: malayalam
+old   1: insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department')
+new   1: insert into studentsdetails(name,age,mark,department)values('rincy',23,78,'malayalam')
+
+1 row created.
+
+SQL> insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department');
+Enter value for name: manu
+Enter value for age: 21
+Enter value for mark: 67
+Enter value for department: economics
+old   1: insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department')
+new   1: insert into studentsdetails(name,age,mark,department)values('manu',21,67,'economics')
+
+1 row created.
+
+SQL> insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department');
+Enter value for name: sony
+Enter value for age: 20
+Enter value for mark: 80
+Enter value for department: botany
+old   1: insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department')
+new   1: insert into studentsdetails(name,age,mark,department)values('sony',20,80,'botany')
+
+1 row created.
+
+SQL> insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department');
+Enter value for name: dev
+Enter value for age: 21
+Enter value for mark: 70
+Enter value for department: zoology
+old   1: insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department')
+new   1: insert into studentsdetails(name,age,mark,department)values('dev',21,70,'zoology')
+
+1 row created.
+
+SQL> insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department');
+Enter value for name: veena
+Enter value for age: 20
+Enter value for mark: 67
+Enter value for department: hindi
+old   1: insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department')
+new   1: insert into studentsdetails(name,age,mark,department)values('veena',20,67,'hindi')
+
+1 row created.
+
+SQL> insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department');
+Enter value for name: ram
+Enter value for age: 21
+Enter value for mark: 78
+Enter value for department: physics
+old   1: insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department')
+new   1: insert into studentsdetails(name,age,mark,department)values('ram',21,78,'physics')
+
+1 row created.
+
+SQL> insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department');
+Enter value for name: diya
+Enter value for age: 23
+Enter value for mark: 84
+Enter value for department: chemistry
+old   1: insert into studentsdetails(name,age,mark,department)values('&name',&age,&mark,'&department')
+new   1: insert into studentsdetails(name,age,mark,department)values('diya',23,84,'chemistry')
+
+1 row created.
+
+SQL> select*from studentsdetails;
+
+NAME                        AGE       MARK DEPARTMENT
+-------------------- ---------- ---------- --------------------
+priya                        21         89 history
+tom                          21         90 commerce
+eva                          22         91 english
+rincy                        23         78 malayalam
+manu                         21         67 economics
+sony                         20         80 botany
+dev                          21         70 zoology
+veena                        20         67 hindi
+ram                          21         78 physics
+diya                         23         84 chemistry
+
+10 rows selected.
+
+SQL>
