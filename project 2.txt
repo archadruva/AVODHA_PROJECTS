@@ -1,0 +1,517 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Fri Mar 22 10:44:34 2024
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Enter user-name: system
+Enter password:
+Last Successful login time: Wed Mar 20 2024 18:45:17 +05:30
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL>create table sales('product' varchar(20),sale int,saledate DATE,order_id int);
+table created.
+
+
+
+
+
+SQL> describe sales;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PRODUCT                                            VARCHAR2(20)
+ SALE                                               NUMBER(38)
+ SALEDATE                                           DATE
+ ORDER_ID                                           NUMBER(38)
+
+
+
+SQL> insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id);
+Enter value for product: dates
+Enter value for sale: 2456
+Enter value for saledate: 22/01/2023
+Enter value for order_id: 1
+old   1: insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id)
+new   1: insert into sales values('dates',2456,TO_DATE('22/01/2023','dd-mm-yyyy'),1)
+
+1 row created.
+
+SQL> select *from sales;
+
+PRODUCT                    SALE SALEDATE    ORDER_ID
+-------------------- ---------- --------- ----------
+dates                      2456 22-JAN-23          1
+
+SQL> SQL> insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id);
+SP2-0734: unknown command beginning "SQL> inser..." - rest of line ignored.
+SQL> insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id);
+Enter value for product: chips
+Enter value for sale: 2929
+Enter value for saledate: 1/2/2023
+Enter value for order_id: 2
+old   1: insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id)
+new   1: insert into sales values('chips',2929,TO_DATE('1/2/2023','dd-mm-yyyy'),2)
+
+1 row created.
+
+SQL> insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id);
+Enter value for product: wallnut
+Enter value for sale: 1234
+Enter value for saledate: 2/1/2023
+Enter value for order_id: 3
+old   1: insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id)
+new   1: insert into sales values('wallnut',1234,TO_DATE('2/1/2023','dd-mm-yyyy'),3)
+
+1 row created.
+
+SQL> insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id);
+Enter value for product: almond
+Enter value for sale: 1243
+Enter value for saledate: 3/1/2023
+Enter value for order_id: 4
+old   1: insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id)
+new   1: insert into sales values('almond',1243,TO_DATE('3/1/2023','dd-mm-yyyy'),4)
+
+1 row created.
+
+SQL> insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id);
+Enter value for product: milk
+Enter value for sale: 2678
+Enter value for saledate: 3/1/2023
+Enter value for order_id: 5
+old   1: insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id)
+new   1: insert into sales values('milk',2678,TO_DATE('3/1/2023','dd-mm-yyyy'),5)
+
+1 row created.
+
+SQL> insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id);
+Enter value for product: curd
+Enter value for sale: 2190
+Enter value for saledate: 3/1/2023
+Enter value for order_id: 6
+old   1: insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id)
+new   1: insert into sales values('curd',2190,TO_DATE('3/1/2023','dd-mm-yyyy'),6)
+
+1 row created.
+
+SQL> insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id);
+Enter value for product: butter
+Enter value for sale: 2178
+Enter value for saledate: 3/1/2023
+Enter value for order_id: 7
+old   1: insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id)
+new   1: insert into sales values('butter',2178,TO_DATE('3/1/2023','dd-mm-yyyy'),7)
+
+1 row created.
+
+SQL> insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id);
+Enter value for product: water
+Enter value for sale: 4536
+Enter value for saledate: 4/1/2023
+Enter value for order_id: 3
+old   1: insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id)
+new   1: insert into sales values('water',4536,TO_DATE('4/1/2023','dd-mm-yyyy'),3)
+
+1 row created.
+
+SQL> insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id);
+Enter value for product: cake
+Enter value for sale: 2367
+Enter value for saledate: 5/1/2023
+Enter value for order_id: 5
+old   1: insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id)
+new   1: insert into sales values('cake',2367,TO_DATE('5/1/2023','dd-mm-yyyy'),5)
+
+1 row created.
+
+SQL> insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id);
+Enter value for product: mixture
+Enter value for sale: 3214
+Enter value for saledate: 8/1/2023
+Enter value for order_id: 9
+old   1: insert into sales values('&product',&sale,TO_DATE('&saledate','dd-mm-yyyy'),&order_id)
+new   1: insert into sales values('mixture',3214,TO_DATE('8/1/2023','dd-mm-yyyy'),9)
+
+1 row created.
+
+SQL> select *from sales;
+
+PRODUCT                    SALE SALEDATE    ORDER_ID
+-------------------- ---------- --------- ----------
+dates                      2456 22-JAN-23          1
+chips                      2929 01-FEB-23          2
+wallnut                    1234 02-JAN-23          3
+almond                     1243 03-JAN-23          4
+milk                       2678 03-JAN-23          5
+curd                       2190 03-JAN-23          6
+butter                     2178 03-JAN-23          7
+water                      4536 04-JAN-23          3
+cake                       2367 05-JAN-23          5
+mixture                    3214 08-JAN-23          9
+
+10 rows selected.
+
+SQL> select sum(sale)from(sales);
+
+ SUM(SALE)
+----------
+     25025
+
+
+SQL> select SUM(SALE) AS TOTALSALES
+  2  FROM sales
+  3  GROUP BY SALEDATE;
+
+TOTALSALES
+----------
+      2456
+      2929
+      1234
+      8289
+      4536
+      2367
+      3214
+
+7 rows selected.
+
+
+
+
+SQL> select SALEDATE as salesdate, SUM(SALE) as TOTALSAlE
+  2  FROM sales
+  3  GROUP BY SALEDATE;
+
+SALESDATE  TOTALSALE
+--------- ----------
+22-JAN-23       2456
+01-FEB-23       2929
+02-JAN-23       1234
+03-JAN-23       8289
+04-JAN-23       4536
+05-JAN-23       2367
+08-JAN-23       3214
+
+7 rows selected.
+
+SQL> select * FROM SALES;
+
+PRODUCT                    SALE SALEDATE    ORDER_ID
+-------------------- ---------- --------- ----------
+dates                      2456 22-JAN-23          1
+chips                      2929 01-FEB-23          2
+wallnut                    1234 02-JAN-23          3
+almond                     1243 03-JAN-23          4
+milk                       2678 03-JAN-23          5
+curd                       2190 03-JAN-23          6
+butter                     2178 03-JAN-23          7
+water                      4536 04-JAN-23          3
+cake                       2367 05-JAN-23          5
+mixture                    3214 08-JAN-23          9
+
+10 rows selected.
+
+SQL> SELECT COUNT(SALEDALE) FROM SALES GROUP BY SALEDATE;
+SELECT COUNT(SALEDALE) FROM SALES GROUP BY SALEDATE
+             *
+ERROR at line 1:
+ORA-00904: "SALEDALE": invalid identifier
+
+
+SQL> SELECT COUNT(SALEDATE) FROM SALES GROUP BY SALEDATE;
+
+COUNT(SALEDATE)
+---------------
+              1
+              1
+              1
+              4
+              1
+              1
+              1
+
+7 rows selected.
+
+SQL> SELECT SALEDATE FROM SALES GROUP BY SALEDATE;
+
+SALEDATE
+---------
+22-JAN-23
+01-FEB-23
+02-JAN-23
+03-JAN-23
+04-JAN-23
+05-JAN-23
+08-JAN-23
+
+7 rows selected.
+
+
+
+
+
+SQL> SELECT SALEDATE, count(*)
+  2  from sales
+  3  GROUP BY (SALEDATE);
+
+SALEDATE    COUNT(*)
+--------- ----------
+22-JAN-23          1
+01-FEB-23          1
+02-JAN-23          1
+03-JAN-23          4
+04-JAN-23          1
+05-JAN-23          1
+08-JAN-23          1
+
+7 rows selected.
+
+SQL>
+SQL> SELECT SALEDATE, count(*)
+  2  from sales
+  3  GROUP BY (SALEDATE)
+  4  ORDER BY (SALEDATE);
+
+SALEDATE    COUNT(*)
+--------- ----------
+02-JAN-23          1
+03-JAN-23          4
+04-JAN-23          1
+05-JAN-23          1
+08-JAN-23          1
+22-JAN-23          1
+01-FEB-23          1
+
+7 rows selected.
+
+SQL> SELECT*FROM EMPLOYEES;
+
+NAME                        AGE
+-------------------- ----------
+raju                         26
+ramu                         30
+tom                          37
+tinu                         29
+manu                         31
+tiny                         25
+
+6 rows selected.
+
+SQL> ALTER TABLE EMPLOYEES ADD SALARY INT;
+
+Table altered.
+
+SQL> SELECT*FROM EMPLOYEES;
+
+NAME                        AGE     SALARY
+-------------------- ---------- ----------
+raju                         26
+ramu                         30
+tom                          37
+tinu                         29
+manu                         31
+tiny                         25
+
+6 rows selected.
+
+
+
+
+SQL> INSERT INTO EMPLOYEES(SALARY) VALUES(&SALARY);
+Enter value for salary: 20000
+old   1: INSERT INTO EMPLOYEES(SALARY) VALUES(&SALARY)
+new   1: INSERT INTO EMPLOYEES(SALARY) VALUES(20000)
+
+1 row created.
+
+SQL> SELECT*FROM EMPLOYEES;
+
+NAME                        AGE     SALARY
+-------------------- ---------- ----------
+raju                         26
+ramu                         30
+tom                          37
+tinu                         29
+manu                         31
+tiny                         25
+                                     20000
+
+7 rows selected.
+
+SQL> DELETE FROM EMPLOYEES WHERE SALARY=20000;
+
+1 row deleted.
+
+SQL> SELECT*FROM EMPLOYEES;
+
+NAME                        AGE     SALARY
+-------------------- ---------- ----------
+raju                         26
+ramu                         30
+tom                          37
+tinu                         29
+manu                         31
+tiny                         25
+
+6 rows selected.
+
+
+
+
+
+
+SQL> update EMPLOYEES
+  2  SET SALARY = 30000
+  3  WHERE NAME = 'raju';
+
+1 row updated.
+
+SQL> SELECT*FROM EMPLOYEES;
+
+NAME                        AGE     SALARY
+-------------------- ---------- ----------
+raju                         26      30000
+ramu                         30
+tom                          37
+tinu                         29
+manu                         31
+tiny                         25
+
+6 rows selected.
+
+SQL> update EMPLOYEES
+  2  set salary=45552
+  3  where age=30;
+
+1 row updated.
+
+SQL> update EMPLOYEES
+  2  SET SALARY = 30000
+  3  where age=37;
+
+1 row updated.
+
+SQL> update EMPLOYEES
+  2  set salary=40000
+  3  where age=29;
+
+1 row updated.
+
+SQL> update EMPLOYEES
+  2  SET SALARY = 20000
+  3  where age=31;
+
+1 row updated.
+
+SQL> update EMPLOYEES
+  2  set salary=25000
+  3  where age=25;
+
+1 row updated.
+
+SQL> SELECT*FROM EMPLOYEES;
+
+NAME                        AGE     SALARY
+-------------------- ---------- ----------
+raju                         26      30000
+ramu                         30      45552
+tom                          37      30000
+tinu                         29      40000
+manu                         31      20000
+tiny                         25      25000
+
+6 rows selected.
+
+SQL> select MAX(SALARY) FROM EMPLOYEES;
+
+MAX(SALARY)
+-----------
+      45552
+
+SQL> select MIN(SALARY) FROM EMPLOYEES;
+
+MIN(SALARY)
+-----------
+      20000
+
+SQL> SELECT MAX(SALARY)AS secondhighestsalary
+  2  fromemployees
+  3
+SQL> SELECT MAX(SALARY)AS secondhighestsalary
+  2  from employees
+  3  WHERE salary<( select MAX(SALARY) FROM EMPLOYEES);
+
+SECONDHIGHESTSALARY
+-------------------
+              40000
+
+SQL> SELECT MIN(SALARY)AS secondhighestsalary
+  2  from employees
+  3  WHERE salary>( select MIN(SALARY) FROM EMPLOYEES);
+
+SECONDHIGHESTSALARY
+-------------------
+              25000
+
+SQL> ALTER TABLE EMPLOYEES ADD DEP VARCHAR(26);
+
+Table altered.
+
+
+
+
+
+SQL> UPDATE EMPLOYEES
+  2  SET DEP = 'marketing'
+  3  where name = 'raju';
+
+1 row updated.
+
+SQL> UPDATE EMPLOYEES
+  2  SET DEP = 'marketing'
+  3  where age = 30 ;
+
+1 row updated.
+
+
+SQL> UPDATE EMPLOYEES
+  2  SET DEP = 'marketing'
+  3  WHERE AGE=37;
+
+1 row updated.
+
+SQL> UPDATE EMPLOYEES
+  2  SET DEP = 'sales'
+  3  where age = 25;
+
+1 row updated.
+
+SQL> UPDATE EMPLOYEES
+  2  SET DEP = 'marketing'
+  3  where age = 29;
+
+1 row updated.
+
+SQL> UPDATE EMPLOYEES
+  2  SET DEP = 'production'
+  3  where age = 31;
+
+1 row updated.
+
+SQL> select * from employees;
+
+NAME                        AGE     SALARY DEP
+-------------------- ---------- ---------- --------------------------
+raju                         26      30000 marketing
+ramu                         30      45552 marketing
+tom                          37      30000 marketing
+tinu                         29      40000 marketing
+manu                         31      20000 production
+tiny                         25      25000 sales
+
+6 rows selected.
+
+SQL>
+SQL>
