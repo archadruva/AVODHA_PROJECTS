@@ -1,0 +1,39 @@
+Microsoft Windows [Version 10.0.19045.4170]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\HP\Desktop\HOSPITAL>python -m venv C:\Users\HP\Desktop\HOSPITAL\venv
+
+C:\Users\HP\Desktop\HOSPITAL>venv\scripts\activate
+
+(venv) C:\Users\HP\Desktop\HOSPITAL>pip install django
+Collecting django
+  Downloading Django-5.0.4-py3-none-any.whl.metadata (4.1 kB)
+Collecting asgiref<4,>=3.7.0 (from django)
+  Downloading asgiref-3.8.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from django)
+  Downloading sqlparse-0.5.0-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata (from django)
+  Downloading tzdata-2024.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Downloading Django-5.0.4-py3-none-any.whl (8.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.2/8.2 MB 356.8 kB/s eta 0:00:00
+Downloading asgiref-3.8.1-py3-none-any.whl (23 kB)
+Downloading sqlparse-0.5.0-py3-none-any.whl (43 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.0/44.0 kB 166.2 kB/s eta 0:00:00
+Downloading tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 345.4/345.4 kB 357.7 kB/s eta 0:00:00
+Installing collected packages: tzdata, sqlparse, asgiref, django
+Successfully installed asgiref-3.8.1 django-5.0.4 sqlparse-0.5.0 tzdata-2024.1
+
+(venv) C:\Users\HP\Desktop\HOSPITAL>django - admin start project hospital
+'django' is not recognized as an internal or external command,
+operable program or batch file.
+
+(venv) C:\Users\HP\Desktop\HOSPITAL>django-admin startproject hospital   
+
+(venv) C:\Users\HP\Desktop\HOSPITAL>cd hospital
+
+(venv) C:\Users\HP\Desktop\HOSPITAL\hospital>python manage.py startapp management
+
+(venv) C:\Users\HP\Desktop\HOSPITAL\hospital>
+
+(venv) C:\Users\HP\Desktop\HOSPITAL\hospital>
